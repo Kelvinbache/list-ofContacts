@@ -1,0 +1,15 @@
+{
+  "name": "list-of-contacts",
+  "version": "1.0.0",
+  "description": "crear una lista de conctacto, mediante objectos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "list",
+    "contacts"
+  ],
+  "author": "kelvin alejandro abache vanegas",
+  "license": "ISC"
+}
