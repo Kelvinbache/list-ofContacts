@@ -1,4 +1,4 @@
-const receivingData = require('./receiving_the_datas')
+import travelData from "./receiving_the_datas.mjs";
 
 class Api {
   constructor(url) {
@@ -15,7 +15,7 @@ class Api {
 
 const jasonPlacerholder = new Api("https://jsonplaceholder.typicode.com/users");
 
-jasonPlacerholder.datasOfApi().then((data) => data.json()).then(receivingData)
+jasonPlacerholder.datasOfApi().then(travelData)
   .catch((err) => {
     console.error(`tenemos un error recibiendo los datos de esta url:${err}`);
   });

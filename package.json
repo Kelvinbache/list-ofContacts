@@ -1,6 +1,7 @@
 {
   "name": "list-of-contacts",
   "version": "1.0.0",
+  "repository": {"url": "https://github.com/Kelvinbache/list-of-contacts"},
   "description": "crear una lista de conctacto, mediante objectos",
   "main": "index.js",
   "scripts": {
