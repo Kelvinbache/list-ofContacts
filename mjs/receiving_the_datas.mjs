@@ -1,15 +1,20 @@
-class Contacts {
-  constructor(name, phone) {
-    this.name = name;
-    this.phone = phone;
-  }
+import { dataOfAPi } from "./object_api.mjs";
 
-  travelDatas(data) {
-   return data
+class Contacts {
+  constructor(name, lastName) {
+    this.name = name;
+    this.lastName = lastName;
+  }
+  screen() {
+    return this.name + " " + this.lastName;
   }
 }
 
-export const travelDat = Contacts.travelDatas;
-const user1 = new Contacts();
-console.log(user1.travelDatas())
+
+dataOfAPi.then((data) => {
+  for (const users of Object.values(data)) {
+      console.log(users)    
+  }
+});
+
 
