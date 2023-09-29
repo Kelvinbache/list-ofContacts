@@ -13,8 +13,9 @@ class Api {
   }
 }
 
-const jasonPlacerholder = new Api("https://jsonplaceholder.typicode.com/users");
+//const jasonPlacerholder = new Api("https://jsonplaceholder.typicode.com/users");
 
+const jsonplaceholder = new Api('../json/user.json')
 jasonPlacerholder.datasOfApi().then(travelData)
   .catch((err) => {
     console.error(`tenemos un error recibiendo los datos de esta url:${err}`);

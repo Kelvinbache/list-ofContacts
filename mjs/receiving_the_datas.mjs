@@ -5,8 +5,7 @@ class Contacts {
   }
 
   travelDatas(data) {
-   const json = data.Json();
-   return json
+   return data
   }
 }
 
