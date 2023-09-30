@@ -1,20 +1,42 @@
 import { dataOfAPi } from "./object_api.mjs";
 
 class Contacts {
-  constructor(name, lastName) {
-    this.name = name;
-    this.lastName = lastName;
+  constructor() {
+    this.name;
+    this.phone;
   }
-  screen() {
-    return this.name + " " + this.lastName;
+
+  data(data) {
+    for (const items of data) {
+      this.name = items.name;
+      this.phone = items.phone;
+      this.screen(this.name, this.phone);
+    }
+  }
+
+  screen(name, phone) {
+    //modificar el codigo, hacer el cogigo html por fuera
+    const container = document.getElementById("container");
+    container.innerHTML = `
+    <table>
+    <colgroup span="4" class="columns"></colgroup>
+          <tr> 
+          <th>name</th>
+          <th>phone</th>
+          </tr>
+
+          <tr>
+          <td>
+          ${name}
+          </td>
+          <td>
+          ${phone}
+          </td>
+          </tr>
+         </table>
+    `;
   }
 }
 
-
-dataOfAPi.then((data) => {
-  for (const users of Object.values(data)) {
-      console.log(users)    
-  }
-});
-
-
+const datas = new Contacts();
+dataOfAPi.then((data) => datas.data(data));

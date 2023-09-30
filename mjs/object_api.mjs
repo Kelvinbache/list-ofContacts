@@ -15,7 +15,5 @@ class Api {
   }
 }
 
-//const jasonPlacerholder = new Api("https://jsonplaceholder.typicode.com/users");
-
-const jsonplaceholder = new Api("../json/user.json");
-export const dataOfAPi = jsonplaceholder.answer()
+const jasonPlacerholder = new Api("https://jsonplaceholder.typicode.com/users");
+export const dataOfAPi = jasonPlacerholder.answer()
