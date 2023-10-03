@@ -6,37 +6,22 @@ class Contacts {
     this.phone;
   }
 
-  data(data) {
+  traveldata(data) {
     for (const items of data) {
-      this.name = items.name;
-      this.phone = items.phone;
-      this.screen(this.name, this.phone);
+      this.tags((this.name = items.name), (this.phone = items.phone));
     }
   }
 
-  screen(name, phone) {
-    //modificar el codigo, hacer el cogigo html por fuera
-    const container = document.getElementById("container");
-    container.innerHTML = `
-    <table>
-    <colgroup span="4" class="columns"></colgroup>
-          <tr> 
-          <th>name</th>
-          <th>phone</th>
-          </tr>
-
-          <tr>
-          <td>
-          ${name}
-          </td>
-          <td>
-          ${phone}
-          </td>
-          </tr>
-         </table>
-    `;
+  tags(name, phone) {
+    const tabale = document.getElementById("table");
+    const tr = document.createElement("tr");
+    tr.innerHTML = `<td>${name}</td> <td>${phone}</td>`;
+    tabale.appendChild(tr);
   }
 }
 
-const datas = new Contacts();
-dataOfAPi.then((data) => datas.data(data));
+const datasUsers = new Contacts();
+dataOfAPi.then((data) => datasUsers.traveldata(data));
+
+// crear una fucion que creer etiquetas tr y td
+// y pegar los datos
