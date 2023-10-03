@@ -23,5 +23,3 @@ class Contacts {
 const datasUsers = new Contacts();
 dataOfAPi.then((data) => datasUsers.traveldata(data));
 
-// crear una fucion que creer etiquetas tr y td
-// y pegar los datos
